@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Thomas Tovey - Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./static/css/base_style.css">
+        <link rel="stylesheet" type="text/css" href="./static/css/about_style.css">
+    </head>
+</html>
+
+<body>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{{ url_for('index') }}"><img src="./static/assets/images/home_button.png" class="nav-button"> Home</a>
+        <a href="{{ url_for('projects') }}"><img src="./static/assets/images/projects_button.png" class="nav-button"> Projects</a>
+        <a href="javascript:void(0)" style="background-color: lightgray; color: black;"><img src="./static/assets/images/info_button.png" class="nav-button"> About Me</a>
+        <a href="{{ url_for('contact') }}"><img src="./static/assets/images/contact_button.png" class="nav-button"> Contact</a>
+      </div>
+      <div class="menu-container">
+        <div class="menu">
+          <span class="span-menu" onclick="openNav()"><img src="./static/assets/images/menu_button.png" class="menu-button"> Menu</span>
+        </div>
+
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+        </script>
+      </div>
+  <div class="content-container">
+  <div class="button-container">
+    <a class="download_button" href="./static/assets/files/Thomas Tovey CV.pdf" download="Thomas Tovey-CV.pdf">Download CV</a>
+  </div>
+    <div class="cv-container">
+        <hr>
+        <h2 class="section-title">Thomas Tovey</h2>
+        <p class="cv-p" style="text-align: center;">
+        I am a professional, results-focused person who enjoys new challenges and solving
+        problems. I am looking for a role that will stretch my knowledge and allow me to learn
+        new skills whilst improving my understanding of the skills I already have.
+        </p>
+        <p class="cv-p" style="text-align: center;">
+        Since leaving my role at Argos in March 2025, I have been focusing on upskilling and 
+        transitioning my skills from Excel-based coding to a primarily Python-based skillset with 
+        knowledge on SQL, HTML, CSS etc and the ability to integrate them all with each other.
+        </p>
+        <hr>
+        <h2 class="section-title"><u>Education</u></h2>
+        <p class="education">
+          -Self taught Python, HTML, CSS & SQL via UDEMY, March 2025-Current-
+          </p>
+        <p class="education"><a href="{{ url_for('certificate') }}" target="_blank" rel="noopener noreferrer">See Certificate</a></p>
+        <p class="education">
+          -Staffordshire University [3D Games Design (MEng)], 2013 to Summer 2017-
+        </p>
+        <p class="education">
+        -The Ridings’ Federation Winterbourne International Academy, 2009 to Summer 2012 -
+        </p>
+        <p class="education">
+          -The Ridings High School, 2005 to Summer 2009-
+        </p>
+        <hr>
+        <h2 class="section-title"><u>Employment History</u></h2>
+        <p class="role">
+        <u>Team Manager</u>
+        <br> Argos Bristol LFC (May 2021-March 2025)
+        <br>
+        </p>
+        <p class="cv-p">
+        The Bristol LFC is a fulfilment centre covering Bristol, Bath,
+        Gloucester, Swindon and going as far south as Bridgwater,
+        shipping out thousands of orders per day. As part of my role, I
+        was responsible for the development of various tools used to
+        assist with the running of the site. These included:
+        <br>
+        <ul>
+          <li class="job-list">
+          A system for the stores we delivered too to report back any
+          discrepancies with their deliveries and get a live response on the
+          actions to take, to enable the quickest resolution for their
+          customers. The tool could also analyse the reports to identify
+          trends such as if the same stores had the most errors, if the
+          same items were going missing, and generate daily, weekly,
+          monthly, and yearly reports.
+          </li>
+          <br>
+          <li class="job-list">
+          A tool that could take rotas and return information on the
+          specific number of colleagues in at a certain time, the number of
+          colleagues in for various roles, and the salary cost to the
+          business of specific shifts, accounting for things such as breaks
+          and premiums.
+          </li>
+          <br>
+          <li class="job-list">
+          A tool to collate various reports available to us from the
+          company and automatically generate monthly and yearly
+          colleague performance reports from them.
+          </li>.
+          <br>
+          <li class="job-list">
+          Automating various processes in tools provided to us by the
+          company where previously the data had to be input manually
+          multiple times a day.
+          </li>
+        </ul>
+        <br>
+        <p class="cv-p">
+        I was also responsible for auditing our weekly delivery
+        paperwork and fuel receipts, and if I discover any discrepancies,
+        reporting them and putting in processes to mitigate any future
+        issues.
+        </p>
+        <p class="role">
+        <u>Retail Manager</u>
+        <br>
+        Argos (September 2019-May 2021)
+        <br>
+        <br>
+        <u>Argos</u>
+        <br>
+        Colleague & Team Leader (October 2012-September 2019)
+        </p>
+        <hr>
+        <h2 class="section-title"><u>Skills</u></h2>
+        <div class="skills-container">
+        <div class="column">
+          <ul>
+            <li class="job-list">Problem-Solving</li>
+            <li class="job-list">Team-work</li>
+            <li class="job-list">Analytical</li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul style="list-style-position: inside;">
+            <li class="job-list">Creative</li>
+            <li class="job-list">Quick-Learning</li>
+            <li class="job-list">Logic-Focused</li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul>
+            <li class="job-list">Problem-Solving</li>
+            <li class="job-list">Team-work</li>
+            <li class="job-list">Analytical</li>
+          </ul>
+        </div>
+        </div>
+        <hr>
+        <h2 class="section-title"><u>Volunteering</u></h2>
+        <p class="role">
+        <u>Scout Leader (2012-Present)</u>
+        </p>
+        <p class="cv-p">
+        Since leaving scouts myself, I have been a leader for the 28th Kingwood District specialising
+        in training young people to complete the Ten Tors' Challenge. The Challenge is run by the
+        army and consist of teams of 6 hiking 35, 45 or 55 miles across Dartmoor over 2 days.
+        In my role I am responsible for taking the young people in our group on practise hikes to build
+        up their endurance, teaching them navigation, survival and camping skills as well as
+        attending monthly meetings of our scout leadership team where we discuss finances, risks,
+        training plans etc.
+        </p>
+        <hr>
+    </div>
+  </div>
+</body>
+
+<footer>
+    <div class="footer-content">
+      <p class="design">Design created by Thomas Tovey</p>
+      <a href="https://github.com/THJT-9" target="_blank" rel="noopener noreferrer"><img src="./static/assets/images/github_logo.png" class="footer-link-start"></a>
+      <a href="https://uk.linkedin.com/in/thomas-tovey-b6545b109" target="_blank" rel="noopener noreferrer"><img src="./static/assets/images/linkedin_logo_bw.png" class="footer-link"></a>
+      <a href="mailto:thomastovey3d@gmail.com" ><img src="./static/assets/images/contact_button.png" class="footer-link-end"></a>
+    </div>
+</footer>

@@ -1,0 +1,43 @@
+.scrolling-banner-container {
+    background-color: #eff5ff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.scrolling-banner-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+/* Applies the Animation to the text */
+.scrolling-banner-inner>div {
+    animation: var(--effect) var(--marquee-speed) linear infinite;
+}
+
+/* Pauses the animation when a user hovers over it
+.scrolling-banner-container:hover .scrolling-banner-inner>div {
+    animation-play-state: paused;
+}
+*/
+
+/* Sets the Animation using Keyframes. Reverse % to change direction of effect */
+@keyframes scroll-effect {
+    0% {
+        transform: translateX(250%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

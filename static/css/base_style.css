@@ -1,0 +1,141 @@
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #212020;
+}
+
+/* Nav Elements */
+.menu-container {
+  width: 160px;
+}
+
+.span-menu {
+  font-size: 35px;
+  cursor: pointer;
+  color: white;
+  vertical-align: auto;
+}
+
+.menu-button {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+.menu {
+  position: fixed;
+  z-index: 1;
+  top:46.5vh;
+  width: 50px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-left: 20px;
+  opacity: 40%;
+}
+
+.menu:hover {
+  width: 150px;
+  background-color: gray;
+  border: 2px solid dimgray;
+  border-radius: 50px 20px 20px 50px;
+  transition: 1s;
+  opacity: 100%;
+}
+
+.nav-button {
+  width: 45px;
+  vertical-align: middle;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40vh;
+  white-space: nowrap;
+  border-right: 3px solid dimgray;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 3rem;}
+}
+
+/* Content */
+.content-container {
+  margin-left: 9vw;
+  margin-right: 9vw;
+}
+
+/* Footer Elements */
+footer {
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+  border-top: 2px solid lightgray;
+  background-color: #111;
+  color: white;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.footer-content {
+  margin-left:20%;
+  margin-right: 20%;
+  text-align: center;
+}
+
+.design {
+  padding-right: 20px;
+  position: fixed;
+  bottom: 0;
+  right:0;
+  width: 30%;
+  text-align: right;
+}
+
+.footer-link-start{
+  width: 40px;
+  vertical-align: middle;
+}
+
+.footer-link {
+  width: 40px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.footer-link-end {
+  width: 40px;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 20px;
+}

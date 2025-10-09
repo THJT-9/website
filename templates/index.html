@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Thomas Tovey - Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./static/css/base_style.css">
+        <link rel="stylesheet" type="text/css" href="./static/css/index_style.css">
+        <link rel="stylesheet" type="text/css" href="./static/css/scrolling_banner_style.css">
+    </head>
+</html>
+
+<body class="body_bg">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" style="background-color: lightgray; color: black;"><img src="./static/assets/images/home_button.png" class="nav-button"> Home</a>
+        <a href="{{ url_for('projects') }}"><img src="./static/assets/images/projects_button.png" class="nav-button"> Projects</a>
+        <a href="{{ url_for('about') }}"><img src="./static/assets/images/info_button.png" class="nav-button"> About Me</a>
+        <a href="{{ url_for('contact') }}"><img src="./static/assets/images/contact_button.png" class="nav-button"> Contact</a>
+      </div>
+      <div class="menu-container">
+        <div class="menu">
+          <span class="span-menu" onclick="openNav()"><img src="./static/assets/images/menu_button.png" class="menu-button"> Menu</span>
+        </div>
+
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+        </script>
+      </div>
+
+  <div class="scrolling-banner-container">
+    <div class="scrolling-banner-inner" style="--marquee-speed: 30s; --effect:scroll-effect" role="marquee">
+        <div class="scrolling-text">
+            <div class="scrolling-text-item">NEW PYTHON PROJECT ADDED: Morse Code Encoder/Decoder</div>
+        </div>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="profile-container">
+      <img class="profile" src="./static/assets/images/profile.png" title="Thomas Tovey">
+    </div>
+
+    <div class="name-container">
+      <h4 class="name-text">Thomas Tovey</h4>
+    </div>
+
+    <div class="text-change-container">
+      <div class="text-changer">
+        <!--<p class="coding-language">Python |</p>-->
+        <div class="text"></div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="knowledge-base-container">
+        <hr>
+
+      <div class="knowledge-bg">
+        <p class="knowledge-title"><u>Knowledge Base</u></p>
+
+        <div class="knowledge-imgs-container">
+          <img class="knowledge-img" src="./static/assets/images/skills/python.png" title="Python">
+          <img class="knowledge-img" src="./static/assets/images/skills/pandas.png" title="Pandas">
+          <img class="knowledge-img" src="./static/assets/images/skills/selenium.png" title= "Selenium">
+          <img class="knowledge-img" src="./static/assets/images/skills/flask.png" title="Flask">
+          <img class="knowledge-img" src="./static/assets/images/skills/bootstrap.png" title="Bootstrap">
+          <img class="knowledge-img" src="./static/assets/images/skills/matplotlib.png" title="MatPlotLib">
+          <img class="knowledge-img" src="./static/assets/images/skills/numpy.png" title="NumPy">
+          <img class="knowledge-img" src="./static/assets/images/skills/ploty.png" title="Ploty">
+          <img class="knowledge-img" src="./static/assets/images/skills/sqlite.png" title="SQLite">
+          <img class="knowledge-img" src="./static/assets/images/skills/mysql.png" title="MySQL">
+          <img class="knowledge-img" src="./static/assets/images/skills/html5.png" title="HTML 5">
+          <img class="knowledge-img" src="./static/assets/images/skills/css3.png" title="CSS 3">
+          <br>
+        </div>
+      </div>
+
+      <div class="container" id="knowledge-base-end">
+        <hr>
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer>
+    <div class="footer-content">
+      <p class="design">Design created by Thomas Tovey</p>
+      <a href="https://github.com/THJT-9" target="_blank" rel="noopener noreferrer"><img src="./static/assets/images/github_logo.png" class="footer-link-start"></a>
+      <a href="https://uk.linkedin.com/in/thomas-tovey-b6545b109" target="_blank" rel="noopener noreferrer"><img src="./static/assets/images/linkedin_logo_bw.png" class="footer-link"></a>
+      <a href="mailto:thomastovey3d@gmail.com" ><img src="./static/assets/images/contact_button.png" class="footer-link-end"></a>
+    </div>
+</footer>

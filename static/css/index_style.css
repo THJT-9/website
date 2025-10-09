@@ -1,0 +1,115 @@
+.body_bg {
+  font-family: "Lato", sans-serif;
+  background-image: url('../assets/img/background_pattern.png');
+  background-size: cover;
+}
+
+.profile-container {
+  justify-content: center;
+  text-align: center;
+  z-index: 0;
+  /* With scrolling banner on */
+  margin-top: 12vh;
+  /*margin-top: 15vh;*/
+  margin-bottom: -4vh;
+}
+
+.profile {
+    text-align: center;
+    max-width: 350px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.name-container {
+  text-align: center;
+  z-index: 0;
+}
+
+.name-text {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  z-index: 0;
+  margin-bottom: 0;
+}
+
+.text-change-container {
+  text-align: center;
+  z-index: 0;
+}
+
+.coding-language {
+  font-size: 3rem;
+  color:white;
+  margin-right: 15px;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.text-changer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+.text {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.text::after {
+  content: "";
+  animation: change-text 10s infinite;
+}
+
+@keyframes change-text {
+  0% {
+    content: "Python | Analyst"
+  }
+  30% {
+    content: "Python | Analyst"
+  }
+  50% {
+    content: "Python | Developer"
+  }
+  100% {
+    content: "Python | Engineer"
+  }
+}
+
+.knowledge-base-container {
+  margin-bottom: 8vh;
+}
+
+.knowledge-bg {
+  background-color: rgba(255,255,255,0.3);
+  padding-top:5px;
+  padding-bottom:20px;
+  border-radius: 5px;
+}
+
+.knowledge-title {
+  font-size: 35px;
+  color:white;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.knowledge-imgs-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.knowledge-img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 15px;
+  background-color: white;
+}

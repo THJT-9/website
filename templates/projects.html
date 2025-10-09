@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Thomas Tovey - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./static/css/base_style.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/projects_style.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/carousel_style.css">
+  </head>
+</html>
+ 
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="{{ url_for('index') }}"><img src="./static/assets/images/home_button.png" class="nav-button"> Home</a>
+    <a href="javascript:void(0)" style="background-color: lightgray; color: black;"><img src="./static/assets/images/projects_button.png" class="nav-button"> Projects</a>
+    <a href="{{ url_for('about') }}"><img src="./static/assets/images/info_button.png" class="nav-button"> About Me</a>
+    <a href="{{ url_for('contact') }}"><img src="./static/assets/images/contact_button.png" class="nav-button"> Contact</a>
+  </div>
+
+  <div class="menu-container">
+    <div class="menu">
+      <span class="span-menu" onclick="openNav()"><img src="./static/assets/images/menu_button.png" class="menu-button"> Menu</span>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="carousel-container" style="margin-top: 30px;">
+      <div class="slideshow-container" style="text-align: center;">
+        <div class="mySlides fade">
+          <a href="#project1" rel="noopener noreferrer">
+            <img src="./static/assets/images/morse-code-featured-cover.png" style="width: 100%; height: 450px;">
+          </a>
+          </div>
+
+        <div class="mySlides fade">
+          <a href="#project2" rel="noopener noreferrer">
+            <img src="./static/assets/images/featured_placeholder.png" style="width: 100%; height: 450px;">
+          </a>
+        </div>
+
+        <div class="mySlides fade">
+          <a href="#project6" rel="noopener noreferrer">
+            <img src="./static/assets/images/featured_placeholder.png" style="width: 100%; height: 450px;">
+          </a>
+        </div>
+
+        <a class="prev" style="font-size: 50px; left: 0%; top: 0%; padding: 200px 10px 184px; margin-top: 0px; border-radius: 5px 0px 0px 5px;" onclick="plusSlides(-1)">❮</a>
+        <a class="next" style="font-size: 50px; right: 0%; top: 0%; padding: 200px 10px 184px; margin-top: 0px; border-radius: 0px 5px 5px 0px;" onclick="plusSlides(1)">❯</a>
+        <br>
+
+      </div>
+    </div>
+    <div>
+      <hr>
+    </div>
+
+    <!-- Projects 1-3 -->
+    <div class="project-container" style="margin-top: 30px;">
+      <div id= "project1" class="column1">
+        <div class="carousel-container">
+          <div class="slideshow-container">
+
+            <div class="p1mySlides fade">
+              <a href="https://github.com/THJT-9/Text-to-Morse-Code-Generator" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/morse-code-project-cover.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p1mySlides fade">
+              <a href="https://github.com/THJT-9/Text-to-Morse-Code-Generator" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/morse-code.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p1mySlides fade">
+              <a href="https://github.com/THJT-9/Text-to-Morse-Code-Generator" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <a class="prev" onclick="p1plusSlides(-1)">❮</a>
+            <a class="next" onclick="p1plusSlides(1)">❯</a>
+            <br>
+            <div style="text-align:center">
+              <span class="p1dot" onclick="p1currentSlide(1)"></span> 
+              <span class="p1dot" onclick="p1currentSlide(2)"></span> 
+              <span class="p1dot" onclick="p1currentSlide(3)"></span> 
+            </div>
+
+          </div>
+        </div>
+        <p class="project-name"><u>Morse Code Converter</u></p>
+        <p class="project-desc">
+          A text-based Morse Code Encoder and Decoder. The User selects the operation they wish to perform and then inputs the text they wish to encode or decode. The program then returns the encoded or decoded message to the User.
+        </p>
+        <p class="features">
+          Features include:
+        </p>
+        <ul>
+          <li class="features">
+            Automatic detection of encoding/decoding requirement.
+          </li>
+          <li class="features">
+            Error handling for characters that have no morse code translation when encoding. 
+          </li>
+          <li class="features">
+            Error handling for undecodable characters.
+          </li>
+        </ul>
+        <p class="project-langs">
+          <u>Languages Used</u>
+        </p>
+          <img  class="knowledge-img" style="height: 50px; width: 50px;" src="./static/assets/images/skills/python.png">
+      </div>
+
+      <div id="project2" class="column1">
+        <div class="carousel-container">
+          <div class="slideshow-container">
+
+            <div class="p2mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p2mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p2mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <a class="prev" onclick="p2plusSlides(-1)">❮</a>
+            <a class="next" onclick="p2plusSlides(1)">❯</a>
+            <br>
+            <div style="text-align:center">
+              <span class="p2dot" onclick="p2currentSlide(1)"></span> 
+              <span class="p2dot" onclick="p2currentSlide(2)"></span> 
+              <span class="p2dot" onclick="p2currentSlide(3)"></span> 
+            </div>
+
+          </div>
+        </div>
+        <p class="project-name"><u>Portfolio Project 2</u></p>
+        <p class="project-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="features">
+          Features include:
+        </p>
+        <ul>
+          <li class="features">
+            Feature 1 description description description.
+          </li>
+          <li class="features">
+            Feature 2 description description description.
+          </li>
+          <li class="features">
+            Feature 3 description description description.
+          </li>
+        </ul>
+        <p class="project-langs">
+          <u>Languages Used</u>
+        </p>
+          <img  class="knowledge-img" style="height: 50px; width: 50px;" src="./static/assets/images/skills/python.png">
+      </div>
+
+      <div id="project3" class="column1">
+        <div class="carousel-container">
+          <div class="slideshow-container">
+
+            <div class="p3mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p3mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p3mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <a class="prev" onclick="p3plusSlides(-1)">❮</a>
+            <a class="next" onclick="p3plusSlides(1)">❯</a>
+            <br>
+            <div style="text-align:center">
+              <span class="p3dot" onclick="p3currentSlide(1)"></span> 
+              <span class="p3dot" onclick="p3currentSlide(2)"></span> 
+              <span class="p3dot" onclick="p3currentSlide(3)"></span> 
+            </div>
+
+          </div>
+        </div>
+        <p class="project-name"><u>Portfolio Project 3</u></p>
+        <p class="project-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="features">
+          Features include:
+        </p>
+        <ul>
+          <li class="features">
+            Feature 1 description description description.
+          </li>
+          <li class="features">
+            Feature 2 description description description.
+          </li>
+          <li class="features">
+            Feature 3 description description description.
+          </li>
+        </ul>
+        <p class="project-langs">
+          <u>Languages Used</u>
+        </p>
+          <img  class="knowledge-img" style="height: 50px; width: 50px;" src="./static/assets/images/skills/python.png">
+      </div>
+    </div>
+
+    <!-- Projects 4-6 -->
+    <div class="project-container">
+      <div id="project4" class="column1">
+        <div class="carousel-container">
+          <div class="slideshow-container">
+
+            <div class="p4mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p4mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p4mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <a class="prev" onclick="p4plusSlides(-1)">❮</a>
+            <a class="next" onclick="p4plusSlides(1)">❯</a>
+            <br>
+            <div style="text-align:center">
+              <span class="p4dot" onclick="p4currentSlide(1)"></span> 
+              <span class="p4dot" onclick="p4currentSlide(2)"></span> 
+              <span class="p4dot" onclick="p4currentSlide(3)"></span> 
+            </div>
+
+          </div>
+        </div>
+        <p class="project-name"><u>Portfolio Project 4</u></p>
+        <p class="project-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="features">
+          Features include:
+        </p>
+       <ul>
+          <li class="features">
+            Feature 1 description description description.
+          </li>
+          <li class="features">
+            Feature 2 description description description.
+          </li>
+          <li class="features">
+            Feature 3 description description description.
+          </li>
+        </ul>
+        <p class="project-langs">
+          <u>Languages Used</u>
+        </p>
+          <img  class="knowledge-img" style="height: 50px; width: 50px;" src="./static/assets/images/skills/python.png">
+      </div>
+
+      <div id="project5" class="column1">
+        <div class="carousel-container">
+          <div class="slideshow-container">
+
+            <div class="p5mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p5mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p5mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <a class="prev" onclick="p5plusSlides(-1)">❮</a>
+            <a class="next" onclick="p5plusSlides(1)">❯</a>
+            <br>
+            <div style="text-align:center">
+              <span class="p5dot" onclick="p5currentSlide(1)"></span> 
+              <span class="p5dot" onclick="p5currentSlide(2)"></span> 
+              <span class="p5dot" onclick="p5currentSlide(3)"></span> 
+            </div>
+          </div>
+        </div>
+        <p class="project-name"><u>Portfolio Project 5</u></p>
+        <p class="project-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="features">
+          Features include:
+        </p>
+        <ul>
+          <li class="features">
+            Feature 1 description description description.
+          </li>
+          <li class="features">
+            Feature 2 description description description.
+          </li>
+          <li class="features">
+            Feature 3 description description description.
+          </li>
+        </ul>
+        <p class="project-langs">
+          <u>Languages Used</u>
+        </p>
+          <img  class="knowledge-img" style="height: 50px; width: 50px;" src="./static/assets/images/skills/python.png">
+      </div>
+
+      <div id="project6" class="column1">
+        <div class="carousel-container">
+          <div class="slideshow-container">
+
+            <div class="p6mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p6mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <div class="p6mySlides fade">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="./static/assets/images/projects placeholder.png" class="project-img">
+              </a>
+            </div>
+
+            <a class="prev" onclick="p6plusSlides(-1)">❮</a>
+            <a class="next" onclick="p6plusSlides(1)">❯</a>
+            <br>
+            <div style="text-align:center">
+              <span class="p6dot" onclick="p6currentSlide(1)"></span> 
+              <span class="p6dot" onclick="p6currentSlide(2)"></span> 
+              <span class="p6dot" onclick="p6currentSlide(3)"></span> 
+            </div>
+          </div>
+        </div>
+        <p class="project-name"><u>Portfolio Project 6</u></p>
+        <p class="project-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="features">
+          Features include:
+        </p>
+        <ul>
+          <li class="features">
+            Feature 1 description description description.
+          </li>
+          <li class="features">
+            Feature 2 description description description.
+          </li>
+          <li class="features">
+            Feature 3 description description description.
+          </li>
+        </ul>
+        <p class="project-langs">
+          <u>Languages Used</u>
+        </p>
+          <img  class="knowledge-img" style="height: 50px; width: 50px;" src="./static/assets/images/skills/python.png">
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <div class="footer-content">
+    <p class="design">Design created by Thomas Tovey</p>
+    <a href="https://github.com/THJT-9" target="_blank" rel="noopener noreferrer"><img src="./static/assets/images/github_logo.png" class="footer-link-start"></a>
+    <a href="https://uk.linkedin.com/in/thomas-tovey-b6545b109" target="_blank" rel="noopener noreferrer"><img src="./static/assets/images/linkedin_logo_bw.png" class="footer-link"></a>
+    <a href="mailto:thomastovey3d@gmail.com" ><img src="./static/assets/images/contact_button.png" class="footer-link-end"></a>
+  </div>
+</footer>
+
+<!-- Script: Navbar -->
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+<!-- Script: Carousel (Featured) -->
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function p1currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+<!-- Script: Carousel (Project 1) -->
+<script>
+  let p1slideIndex = 1;
+  p1showSlides(p1slideIndex);
+
+  function p1plusSlides(n) {
+    p1showSlides(p1slideIndex += n);
+  }
+
+  function p1currentSlide(n) {
+    p1showSlides(p1slideIndex = n);
+  }
+
+  function p1showSlides(n) {
+    let i;
+    let p1slides = document.getElementsByClassName("p1mySlides");
+    let p1dots = document.getElementsByClassName("p1dot");
+    if (n > p1slides.length) {p1slideIndex = 1}    
+    if (n < 1) {p1slideIndex = p1slides.length}
+    for (i = 0; i < p1slides.length; i++) {
+      p1slides[i].style.display = "none";  
+    }
+    for (i = 0; i < p1dots.length; i++) {
+      p1dots[i].className = p1dots[i].className.replace(" active", "");
+    }
+    p1slides[p1slideIndex-1].style.display = "block";  
+    p1dots[p1slideIndex-1].className += " active";
+  }
+</script>
+<!-- Script: Carousel (Project 2) -->
+<script>
+    let p2slideIndex = 1;
+  p2showSlides(p2slideIndex);
+
+  function p2plusSlides(n) {
+    p2showSlides(p2slideIndex += n);
+  }
+
+  function p2currentSlide(n) {
+    p2showSlides(p2slideIndex = n);
+  }
+
+  function p2showSlides(n) {
+    let i;
+    let p2slides = document.getElementsByClassName("p2mySlides");
+    let p2dots = document.getElementsByClassName("p2dot");
+    if (n > p2slides.length) {p2slideIndex = 1}    
+    if (n < 1) {p2slideIndex = p2slides.length}
+    for (i = 0; i < p2slides.length; i++) {
+      p2slides[i].style.display = "none";  
+    }
+    for (i = 0; i < p2dots.length; i++) {
+      p2dots[i].className = p2dots[i].className.replace(" active", "");
+    }
+    p2slides[p2slideIndex-1].style.display = "block";  
+    p2dots[p2slideIndex-1].className += " active";
+  }
+</script>
+<!-- Script: Carousel (Project 3) -->
+<script>
+    let p3slideIndex = 1;
+  p3showSlides(p3slideIndex);
+
+  function p3plusSlides(n) {
+    p3showSlides(p3slideIndex += n);
+  }
+
+  function p3currentSlide(n) {
+    p3showSlides(p3slideIndex = n);
+  }
+
+  function p3showSlides(n) {
+    let i;
+    let p3slides = document.getElementsByClassName("p3mySlides");
+    let p3dots = document.getElementsByClassName("p3dot");
+    if (n > p3slides.length) {p3slideIndex = 1}    
+    if (n < 1) {p3slideIndex = p3slides.length}
+    for (i = 0; i < p3slides.length; i++) {
+      p3slides[i].style.display = "none";  
+    }
+    for (i = 0; i < p3dots.length; i++) {
+      p3dots[i].className = p3dots[i].className.replace(" active", "");
+    }
+    p3slides[p3slideIndex-1].style.display = "block";  
+    p3dots[p3slideIndex-1].className += " active";
+  }
+</script>
+<!-- Script: Carousel (Project 4) -->
+<script>
+    let p4slideIndex = 1;
+  p4showSlides(p4slideIndex);
+
+  function p4plusSlides(n) {
+    p4showSlides(p4slideIndex += n);
+  }
+
+  function p4currentSlide(n) {
+    p4showSlides(p4slideIndex = n);
+  }
+
+  function p4showSlides(n) {
+    let i;
+    let p4slides = document.getElementsByClassName("p4mySlides");
+    let p4dots = document.getElementsByClassName("p4dot");
+    if (n > p4slides.length) {p4slideIndex = 1}    
+    if (n < 1) {p4slideIndex = p4slides.length}
+    for (i = 0; i < p4slides.length; i++) {
+      p4slides[i].style.display = "none";  
+    }
+    for (i = 0; i < p4dots.length; i++) {
+      p4dots[i].className = p4dots[i].className.replace(" active", "");
+    }
+    p4slides[p4slideIndex-1].style.display = "block";  
+    p4dots[p4slideIndex-1].className += " active";
+  }
+</script>
+<!-- Script: Carousel (Project 5) -->
+<script>
+    let p5slideIndex = 1;
+  p5showSlides(p5slideIndex);
+
+  function p5plusSlides(n) {
+    p5showSlides(p5slideIndex += n);
+  }
+
+  function p5currentSlide(n) {
+    p5showSlides(p5slideIndex = n);
+  }
+
+  function p5showSlides(n) {
+    let i;
+    let p5slides = document.getElementsByClassName("p5mySlides");
+    let p5dots = document.getElementsByClassName("p5dot");
+    if (n > p5slides.length) {p5slideIndex = 1}    
+    if (n < 1) {p5slideIndex = p5slides.length}
+    for (i = 0; i < p5slides.length; i++) {
+      p5slides[i].style.display = "none";  
+    }
+    for (i = 0; i < p5dots.length; i++) {
+      p5dots[i].className = p5dots[i].className.replace(" active", "");
+    }
+    p5slides[p5slideIndex-1].style.display = "block";  
+    p5dots[p5slideIndex-1].className += " active";
+  }
+</script>
+<!-- Script: Carousel (Project 6) -->
+<script>
+    let p6slideIndex = 1;
+  p6showSlides(p6slideIndex);
+
+  function p6plusSlides(n) {
+    p6showSlides(p6slideIndex += n);
+  }
+
+  function p6currentSlide(n) {
+    p6showSlides(p6slideIndex = n);
+  }
+
+  function p6showSlides(n) {
+    let i;
+    let p6slides = document.getElementsByClassName("p6mySlides");
+    let p6dots = document.getElementsByClassName("p6dot");
+    if (n > p6slides.length) {p6slideIndex = 1}    
+    if (n < 1) {p6slideIndex = p6slides.length}
+    for (i = 0; i < p6slides.length; i++) {
+      p6slides[i].style.display = "none";  
+    }
+    for (i = 0; i < p6dots.length; i++) {
+      p6dots[i].className = p6dots[i].className.replace(" active", "");
+    }
+    p6slides[p6slideIndex-1].style.display = "block";  
+    p6dots[p6slideIndex-1].className += " active";
+  }
+</script>

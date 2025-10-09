@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Thomas Tovey - Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./static/css/base_style.css">
+        <link rel="stylesheet" type="text/css" href="./static/css/contact_style.css">
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+</html>
+
+<body>
+  <div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{{ url_for('index') }}"><img src="./static/assets/images/home_button.png" class="nav-button"> Home</a>
+        <a href="{{ url_for('projects') }}"><img src="./static/assets/images/projects_button.png" class="nav-button"> Projects</a>
+        <a href="{{ url_for('about') }}"><img src="./static/assets/images/info_button.png" class="nav-button"> About Me</a>
+        <a href="javascript:void(0)" style="background-color: lightgray; color: black;"><img src="./static/assets/images/contact_button.png" class="nav-button"> Contact</a>
+      </div>
+      <div class="menu-container">
+        <div class="menu">
+          <span class="span-menu" onclick="openNav()"><img src="./static/assets/images/menu_button.png" class="menu-button"> Menu</span>
+        </div>
+
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+        </script>
+      </div>
+  </div>
+  <main class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7" style="color:white;">
+            <p style="text-align: center;">
+              Want to get in touch? Fill out the form below to send me a message and
+                I will get back to you as soon as possible!
+            </p>
+            <div class="my-5">
+              <form action="{{ url_for('contact') }}" method="post"
+                id="contactForm"
+                name="sentMessage"
+              >
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Enter your name..."
+                    required
+                  />
+                  <label for="name">Name</label>
+                </div>
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email..."
+                    required
+                  />
+                  <label for="email">Email address</label>
+                </div>
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Enter your phone number..."
+                    style="color:black"
+                  />
+                  <label for="phone">Phone Number (Optional)</label>
+                </div>
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    placeholder="Enter your message here..."
+                    required
+                    style="height: 12rem"
+                  ></textarea>
+                  <label for="message">Message</label>
+                </div>
+                <br />
+                <button
+                  class="btn btn-primary text-uppercase"
+                  id="submitButton"
+                  type="submit"
+                  style="border-radius:5px;"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+              <p style="text-align: center; font-size: 30px">
+                {{ message }}
+              </p>
+          </div>
+        </div>
+      </div>
+  </main>
+</body>
+
+<footer>
+    <div class="footer-content">
+      <p class="design">Design created by Thomas Tovey</p>
+      <a href="https://github.com/THJT-9" target="_blank" rel="noopener noreferrer"><img src="./static/assets/images/github_logo.png" class="footer-link-start"></a>
+      <a href="https://uk.linkedin.com/in/thomas-tovey-b6545b109" target="_blank" rel="noopener noreferrer"><img src="./static/assets/images/linkedin_logo_bw.png" class="footer-link"></a>
+      <a href="mailto:thomastovey3d@gmail.com" ><img src="./static/assets/images/contact_button.png" class="footer-link-end"></a>
+    </div>
+</footer>
