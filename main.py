@@ -1,7 +1,16 @@
+import os
+from dotenv import load_dotenv
 from flask import Flask, render_template, request
 import smtplib
 
 app = Flask(__name__)
+load_dotenv()
+
+MY_EMAIL = os.getenv("MY_EMAIL")
+MY_EMAIL_PASSWORD = os.getenv("MY_EMAIL_PASSWORD")
+REC_EMAIL = os.getenv("REC_EMAIL")
+SMTP_ADDRESS = os.getenv("SMTP_ADDRESS")
+
 
 
 @app.route('/')
@@ -27,10 +36,10 @@ def contact():
         email = request.form['email']
         phone = request.form['phone']
         message = request.form['message']
-        with smtplib.SMTP("smtp.gmail.com") as connection:
+        with smtplib.SMTP(SMTP_ADDRESS) as connection:
             connection.starttls()
-            connection.login(my_email, gmail_app_password)
-            connection.sendmail(from_addr=my_email, to_addrs=rec_email,
+            connection.login(MY_EMAIL, MY_EMAIL_PASSWORD)
+            connection.sendmail(from_addr=MY_EMAIL, to_addrs=REC_EMAIL,
                                 msg=f"Subject: New Message Received!\n\n"
                                     f"Name: {username}\n"
                                     f"Email: {email}\n"
