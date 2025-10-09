@@ -1,10 +1,6 @@
 from flask import Flask, render_template, request
 import smtplib
 
-my_email = "thjtovey@gmail.com"
-gmail_app_password = "lzri zlnc msik muow"
-rec_email = "thomastovey3d@gmail.com"
-
 app = Flask(__name__)
 
 
