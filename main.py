@@ -1,15 +1,13 @@
 import os
-from dotenv import load_dotenv
 from flask import Flask, render_template, request
 import smtplib
 
 app = Flask(__name__)
-load_dotenv()
 
-MY_EMAIL = os.getenv("MY_EMAIL")
-MY_EMAIL_PASSWORD = os.getenv("MY_EMAIL_PASSWORD")
-REC_EMAIL = os.getenv("REC_EMAIL")
-SMTP_ADDRESS = os.getenv("SMTP_ADDRESS")
+MY_EMAIL = os.environ.get("MY_EMAIL")
+MY_EMAIL_PASSWORD = os.environ.get("MY_EMAIL_PASSWORD")
+REC_EMAIL = os.environ.get("REC_EMAIL")
+SMTP_ADDRESS = os.environ.get("SMTP_ADDRESS")
 
 
 
