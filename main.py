@@ -4,10 +4,10 @@ import smtplib
 
 app = Flask(__name__)
 
-MY_EMAIL = os.environ.get("MY_EMAIL")
-MY_EMAIL_PASSWORD = os.environ.get("MY_EMAIL_PASSWORD")
-REC_EMAIL = os.environ.get("REC_EMAIL")
-SMTP_ADDRESS = os.environ.get("SMTP_ADDRESS")
+my_email = os.environ.get("MY_EMAIL")
+my_gmail_code = os.environ.get("MY_EMAIL_PASSWORD")
+rec_email = os.environ.get("REC_EMAIL")
+smtp_address = os.environ.get("SMTP_ADDRESS")
 
 
 
@@ -34,10 +34,10 @@ def contact():
         email = request.form['email']
         phone = request.form['phone']
         message = request.form['message']
-        with smtplib.SMTP(SMTP_ADDRESS) as connection:
+        with smtplib.SMTP(smtp_address) as connection:
             connection.starttls()
-            connection.login(MY_EMAIL, MY_EMAIL_PASSWORD)
-            connection.sendmail(from_addr=MY_EMAIL, to_addrs=REC_EMAIL,
+            connection.login(my_email, my_gmail_code)
+            connection.sendmail(from_addr=my_email, to_addrs=rec_email,
                                 msg=f"Subject: New Message Received!\n\n"
                                     f"Name: {username}\n"
                                     f"Email: {email}\n"
